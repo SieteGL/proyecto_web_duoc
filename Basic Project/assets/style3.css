@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    height: 100vh; /* La altura del cuerpo coincide con la altura de la ventana gráfica */
+    overflow: hidden; /* Oculta el desbordamiento para evitar el desplazamiento vertical */
+}
+
+#sidebar {
+    width: 20%;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 20px 20px 20px 0; /* Padding en todos los lados excepto en la izquierda */
+    box-sizing: border-box;
+}
+
+#sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px; /* Padding a la derecha y arriba/abajo */
+    transition: background-color 0.3s;
+}
+
+#sidebar a:hover {
+    background-color: #474747; /* Cambio leve de tono al pasar el ratón */
+}
+
+#content {
+    width: 80%; /* Ocupa el 80% del ancho restante */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para los contenedores de color, que ahora contendrán tanto h1 como p */
+.color1, .color2, .color3, .color4 {
+    height: 25vh; /* 25% de la altura de la ventana para cada bloque de color */
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza h1 y p en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    padding: 0 20px; /* Padding solo a los lados */
+    box-sizing: border-box; /* El padding cuenta dentro de la altura */
+    margin: 0; /* No hay margen entre los bloques de color */
+}
+
+/* Estilos para h1 */
+.color1 h1, .color2 h1, .color3 h1, .color4 h1 {
+    margin: 0;
+    font-size: 1.5em; /* Tamaño de fuente para h1 */
+}
+
+/* Estilos para p */
+.color1 p, .color2 p, .color3 p, .color4 p {
+    margin: 0;
+    font-size: 1em; /* Tamaño de fuente para p */
+}
+
+.color1 { background-color: #ff6666; }
+.color2 { background-color: #ffcc66; }
+.color3 { background-color: #66ff66; }
+.color4 { background-color: #66ccff; }
